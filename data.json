@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "title": "Mechanical Keyboard",
+    "description": "Tactile, clicky, and perfect for your coding stack.",
+    "price": "$99.99",
+    "image": "https://via.placeholder.com/250",
+    "affiliate_link": "#"
+  },
+  {
+    "id": 2,
+    "title": "Ultra-Wide Monitor",
+    "description": "Boost your productivity with more screen space.",
+    "price": "$299.00",
+    "image": "https://via.placeholder.com/250",
+    "affiliate_link": "#"
+  }
+]
+
