@@ -1,0 +1,30 @@
+name: Auto-Update StackMarket
+on:
+  schedule:
+    - cron: '0 6 * * *' # Runs every day at 6:00 AM UTC
+  workflow_dispatch:     # Allows you to click a button to run it manually
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Run Update Script
+        run: |
+          pip install requests
+          python main.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "StackMarket Bot"
+          git config --global user.email "bot@stackmarket.com"
+          git add data.json
+          git commit -m "Automated update of product data"
+          git push
