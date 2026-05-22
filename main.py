@@ -16,4 +16,23 @@ def update_store_data():
 
 if __name__ == "__main__":
     update_store_data()
+import json
+import random
+
+# Your unique logic: This is where you would call an API
+# For now, this generates a random "test" product to prove the automation works
+def generate_test_product():
+    new_product = {
+        "id": random.randint(100, 999),
+        "title": "New Featured Gadget",
+        "description": "This deal was added automatically by your bot!",
+        "price": "₹" + str(random.randint(1000, 5000)),
+        "image": "https://via.placeholder.com/250",
+        "affiliate_link": "#"
+    }
+    return [new_product]
+
+# Save to your data file
+with open('data.json', 'w') as f:
+    json.dump(generate_test_product(), f, indent=4)
 
