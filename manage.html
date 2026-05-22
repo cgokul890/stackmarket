@@ -1,0 +1,15 @@
+<input type="text" id="title" placeholder="Product Title">
+<input type="text" id="link" placeholder="Affiliate Link">
+<button onclick="addProduct()">Add to Store</button>
+
+<script>
+  function addProduct() {
+    // This script would append the new product to your data.json
+    // For now, you can just use this to copy-paste data quickly
+    console.log("Add this to your JSON file:", {
+      title: document.getElementById('title').value,
+      affiliate_link: document.getElementById('link').value
+    });
+  }
+</script>
+
